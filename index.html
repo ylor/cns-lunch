@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>CNS Lunch Picker</title>
+  </head>
+  <body>
+    <h1 id="title">CNS Lunch Picker</h1>
+    <p id="place">
+      <!-- Quotes will display here -->
+    </p>
+    <!-- Center is added for button placement -->
+    <button onclick="pickPlace()">Pick!</button>
+    
+    <script defer>
+    var quotes = [
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+    ]
+    function pickPlace() {
+    var randomNumber = Math.floor(Math.random() * (quotes.length));
+    document.getElementById('place').innerHTML = quotes[randomNumber];
+    }
+    </script>
+  </body>
+</html>
