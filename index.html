@@ -6,13 +6,13 @@
   </head>
   <style>
     body {
+      background: #fffceb;
+      color: #000;
       font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
       line-height: 1.6;
-      color: #000;
+      margin: auto;
       max-width: 40rem;
       padding: 2rem;
-      margin: auto;
-      background: #fffceb;
       text-align: center;
       touch-action: manipulation;
     }
@@ -37,7 +37,6 @@
       padding: 25px 80px;
       position: relative;
       text-transform: uppercase;
-      transition: all 0.3s;
       transition: none;
     }
 
@@ -59,7 +58,8 @@
     }
 
     #title {
-      font-size: 4rem;
+      font-size: 6rem;
+      margin: 0;
     }
 
     #place {
@@ -115,7 +115,7 @@
       ];
 
       function changeTitle() {
-        document.getElementById("title").innerHTML = "Lunch!";
+        document.getElementById("title").innerHTML = "LUNCH!";
       }
 
       function pickPlace() {
