@@ -1,58 +1,168 @@
 <html>
-
   <head>
-    <title>CNS Lunch Picker</title>
+    <title>CNS Lunch</title>
   </head>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+        Arial, sans-serif;
       line-height: 1.6;
-      color: #222;
+      color: #000;
       max-width: 40rem;
       padding: 2rem;
       margin: auto;
-      background: #fafafa;
+      background: #fffceb;
+      text-align: center;
     }
 
-    img {
-      max-width: 100%;
+    #button-wrapper {
     }
 
-    a {
-      color: #2ECC40;
+    button {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      background: #cb4e4e;
+      border-radius: 999px;
+      border: none;
+      box-shadow: 0 6px #ab3c3c;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 700;
+      letter-spacing: 1px;
+      outline: none;
+      padding: 25px 80px;
+      position: relative;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      transition: none;
     }
 
-    h1,
-    h2,
-    strong {
-      color: #111;
+    button:after {
+      content: "";
+      position: absolute;
+      transition: all 0.3s;
+      z-index: -1;
+    }
+
+    button:hover {
+      box-shadow: 0 4px #ab3c3c;
+      top: 2px;
+    }
+
+    button:active {
+      box-shadow: 0 0 #ab3c3c;
+      top: 6px;
+    }
+
+    #title {
+      font-size: 4rem;
+    }
+
+    #place {
+      display: block;
+      font-size: 6rem;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .show {
+      display: block;
     }
   </style>
 
   <body>
-    <h1 id="title">CNS Lunch Picker</h1>
-    <p id="place">
-      <!-- Quotes will display here -->
-    </p>
-    <!-- Center is added for button placement -->
-    <button onclick="pickPlace()">Pick!</button>
-
+    <h1 id="title">Lunch?</h1>
+    <main>
+      <span id="place">
+        <!-- Quotes will display here -->
+      </span>
+      <div id="button-wrapper">
+        <button id="pickButton" onclick="pickPlace(); changeTitle()">
+          Pick
+        </button>
+      </div>
+    </main>
     <script defer>
       var quotes = [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-      ]
+      "🍖",
+"🍗",
+"🥩",
+"🥓",
+"🍔",
+"🍟",
+"🍕",
+"🌭",
+"🥪",
+"🌮",
+"🌯",
+"🥙",
+"🍳",
+"🥘",
+"🍲",
+"🥣",
+"🥗",
+"🍿",
+"🥫",
+"🍱",
+"🍘",
+"🍙",
+"🍚",
+"🍛",
+"🍜",
+"🍝",
+"🍠",
+"🍢",
+"🍣",
+"🍤",
+"🍥",
+"🍡",
+"🥟",
+"🥠",
+"🥡",
+"🍦",
+"🍧",
+"🍨",
+"🍩",
+"🍪",
+"🎂",
+"🍰",
+"🥧",
+"🍫",
+"🍬",
+"🍭",
+"🍮",
+"🍯",
+"🍼",
+"🥛",
+"🍵",
+"🍶",
+"🍾",
+"🍷",
+"🍸",
+"🍹",
+"🍺",
+"🍻",
+"🥂",
+"🥃",
+"🥤",
+"🥢"
+      ];
 
-      function pickPlace() {
-        var randomNumber = Math.floor(Math.random() * (quotes.length));
-        document.getElementById('place').innerHTML = quotes[randomNumber];
+      function changeTitle() {
+        document.getElementById("title").innerHTML = "Lunch!";
       }
 
+      function pickPlace() {
+        var randomNumber = Math.floor(Math.random() * quotes.length);
+        document.getElementById("place").innerHTML = quotes[randomNumber];
+      }
     </script>
   </body>
-
 </html>
+
