@@ -8,7 +8,7 @@ if (favicon) {
 
     const ctx = canvas.getContext("2d");
     ctx.font = "64px serif";
-    ctx.fillText("😋", -10, 56);
+    ctx.fillText("😋", 0, 56);
 
     favicon.href = canvas.toDataURL();
   }
