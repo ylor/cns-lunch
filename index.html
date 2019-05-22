@@ -23,7 +23,7 @@
       border-radius: 999px;
       border: none;
       box-shadow: 0 6px #ab3c3c;
-      color: #fff;
+      color: #fffceb;
       cursor: pointer;
       display: inline-block;
       font-family: inherit;
@@ -70,13 +70,14 @@
     <h1 id="title">Lunch?</h1>
     <span id="place">
       <!-- Restaurant will display here -->
+      <address>1234 Penn Ave Miami, FL 33176</address>
     </span>
     <button id="pickButton" onclick="buttonFunction()">
       Pick
     </button>
     <script defer>
       var place = [
-        "🍖",
+        "🍖<br><address>1234 Penn Ave Miami, FL 33176</address>",
         "🍗",
         "🥩",
         "🥓",
